@@ -1,12 +1,168 @@
-# React + Vite
+Here's the updated `README.md` based on your step-by-step setup instructions for:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+✅ **React + Vite**
+✅ **Prettier + ESLint**
+✅ **Husky + Lint-staged**
+✅ **Git initialized setup**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# ⚛️ React + Vite Setup with Prettier, ESLint, Husky, and Lint-Staged
 
-## Expanding the ESLint configuration
+A modern frontend setup for building fast and clean React applications using **Vite**. This includes automatic code formatting and linting with **Prettier**, **ESLint**, **Husky**, and **Lint-staged** to ensure clean and consistent code.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Project Setup
+
+### 1. Create a New Vite React Project (`ESLint` is automatically set up)
+
+```bash
+npm create vite@latest react-app
+```
+
+- **Select Framework**: `React`
+- **Select Variant**: `JavaScript`
+
+Then:
+
+```bash
+cd react-app
+npm install
+npm run dev
+```
+
+---
+
+### 2. Initialize Git (Optional but Recommended)
+
+```bash
+git init
+```
+
+---
+
+## 🧹 Prettier Setup
+
+### 1. Install Prettier & ESLint Plugins
+
+```bash
+npm install --save-dev prettier prettier-eslint eslint-config-prettier eslint-plugin-prettier
+```
+
+### 2. Create Configuration Files
+
+**`.prettierrc`**
+
+```json
+{
+	"printWidth": 90,
+	"useTabs": true,
+	"singleQuote": false
+}
+```
+
+**`.prettierignore`**
+
+```
+node_modules
+dist
+build
+```
+
+### 3. Add Scripts in `package.json`
+
+```json
+"scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+}
+```
+
+### 4. Format Code
+
+```bash
+npm run format
+```
+
+---
+
+## 🐶 Husky + 🧷 Lint-staged Setup
+
+### 1. Install Husky & Lint-staged
+
+```bash
+npm install --save-dev husky
+npx husky init
+npm install --save-dev lint-staged
+```
+
+### 2. Update `.husky/pre-commit`
+
+```bash
+npx husky add .husky/pre-commit "npx lint-staged"
+```
+
+### 3. Add `lint-staged` in `package.json`
+
+```json
+"lint-staged": {
+  "**/*.{js,jsx,ts,tsx}": [
+    "eslint --fix",
+    "prettier --write"
+  ],
+  "**/*.{json,md,css,html}": [
+    "prettier --write"
+  ]
+}
+```
+
+---
+
+## ✅ Test Pre-commit Hook
+
+```bash
+git add .
+git commit -m "test husky-lint-staged"
+```
+
+If everything is set up correctly, Prettier and ESLint will automatically format staged files before commit.
+
+```bash
+✔ Backed up original state in git stash (eb5da79)
+✔ Running tasks for staged files...
+✔ Applying modifications from tasks...
+✔ Cleaning up temporary files...
+[master e2ac104] test husku-lint-staged
+ 1 file changed, 9 insertions(+)
+```
+
+---
+
+## 📁 Project Structure (Minimal)
+
+```
+react-app/
+├── .husky/
+│   └── pre-commit
+├── src/
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── eslint.config.js
+├── package.json
+├── vite.config.js
+└── README.md
+```
+
+---
+
+## 💬 Summary
+
+- ✅ Fast React setup using Vite
+- 🧼 Auto-formatting with Prettier
+- 🔍 Linting with ESLint
+- 🔐 Git hook enforcement with Husky
+- 🎯 Pre-commit file checks with Lint-staged
+
+---
