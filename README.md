@@ -32,7 +32,7 @@ npm run dev
 
 ---
 
-### 2. Initialize Git (Optional but Recommended)
+### 2. Initialise Git (Optional but Recommended)
 
 ```bash
 git init
@@ -54,9 +54,9 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier eslint-pl
 
 ```json
 {
-	"printWidth": 90,
-	"useTabs": true,
-	"singleQuote": false
+    "printWidth": 90,
+    "useTabs": true,
+    "singleQuote": false
 }
 ```
 
