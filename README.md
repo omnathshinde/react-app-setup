@@ -1,9 +1,7 @@
-Here's the updated `README.md` based on your step-by-step setup instructions for:
-
 ✅ **React + Vite**
 ✅ **Prettier + ESLint**
 ✅ **Husky + Lint-staged**
-✅ **Git initialized setup**
+✅ **Git initialised setup**
 
 ---
 
