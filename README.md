@@ -98,7 +98,7 @@ npm install --save-dev lint-staged
 ### 2. Update `.husky/pre-commit`
 
 ```bash
-npx husky add .husky/pre-commit "npx lint-staged"
+npx lint-staged
 ```
 
 ### 3. Add `lint-staged` in `package.json`
