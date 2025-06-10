@@ -4,12 +4,13 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
+		"test": "vite --mode staging",
+		"stag": "vite build --mode staging",
 		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint .",
 		"preview": "vite preview",
 		"format": "prettier --write .",
-		"format:check": "prettier --check .",
 		"prepare": "husky"
 	},
 	"dependencies": {

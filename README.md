@@ -54,9 +54,9 @@ npm install --save-dev prettier prettier-eslint eslint-config-prettier eslint-pl
 
 ```json
 {
-    "printWidth": 90,
-    "useTabs": true,
-    "singleQuote": false
+	"printWidth": 90,
+	"useTabs": true,
+	"singleQuote": false
 }
 ```
 
