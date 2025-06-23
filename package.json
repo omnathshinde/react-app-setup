@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"test": "vite --mode staging",
-		"stag": "vite build --mode staging",
+		"test:build": "vite build --mode staging",
 		"dev": "vite",
 		"build": "vite build",
 		"lint": "eslint .",
@@ -32,6 +32,7 @@
 		"lint-staged": "^16.0.0",
 		"prettier": "^3.5.3",
 		"prettier-eslint": "^16.4.2",
+		"sass": "^1.89.2",
 		"vite": "^6.3.5"
 	},
 	"lint-staged": {

@@ -1,4 +1,4 @@
-import "./App.css";
+import "src/App.scss";
 
 function App() {
 	const api = import.meta.env.VITE_API_URL;
